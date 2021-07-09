@@ -18,7 +18,7 @@ export class GetTCDataCommand extends Command {
      * the array is not undefined and is an array of integers, otherwise it's
      * unusable
      */
-    if (this.param !== undefined &&
+    if ((this.param !== undefined || this.param !== null) &&
       (!Array.isArray(this.param) ||
        !this.param.every(Number.isInteger))) {
 
